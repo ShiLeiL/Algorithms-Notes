@@ -16,6 +16,7 @@ namespace AlgorithmsApplication
 			}
 			return b;
 		}
+		
 		static void Main(string[] args)
 		{
 			int[] num={1,4,4,3,2,2,3,-1,8};

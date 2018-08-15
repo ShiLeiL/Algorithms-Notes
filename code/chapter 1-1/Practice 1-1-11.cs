@@ -6,17 +6,17 @@ namespace AlgorithmsApplication
 		/* 算法（第四版） 1.1.11 */
 		public static void printBoolArray(bool[,] boolArray)
 		{
-		    int rows = boolArray.GetLength(0);//获取行数
-		    int columns = boolArray.GetLength(1);//获取列数
+			int rows = boolArray.GetLength(0);//获取行数
+			int columns = boolArray.GetLength(1);//获取列数
 
-		    //输出列号
-		    for(int i=0;i<columns;i++)
-		    {
-		    	Console.Write("\t{0}",i+1);
-		    }
+			//输出列号
+			for(int i=0;i<columns;i++)
+			{
+				Console.Write("\t{0}",i+1);
+			}
 
-		    //输出行号以及数组
-		    for(int j=0;j<rows;j++)
+			//输出行号以及数组
+			for(int j=0;j<rows;j++)
 			{
 				Console.Write("\n{0}\t",j+1);//输出行号
 				for(int i=0;i<columns;i++)

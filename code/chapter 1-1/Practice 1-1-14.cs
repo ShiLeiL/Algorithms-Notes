@@ -4,7 +4,7 @@ namespace AlgorithmsApplication
 	class Algorithms
 	{
 		/* 算法（第四版） 1.1.14 */
-		//本程序暂不考虑虚数情况，待以后补充
+		//由于底数为2，所以真数必定大于0
 		public static int lg(int N)
 		{
 			int pow=1;
