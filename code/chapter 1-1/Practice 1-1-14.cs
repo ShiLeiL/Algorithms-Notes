@@ -17,6 +17,7 @@ namespace AlgorithmsApplication
 		}
 		static void Main(string[] args)
 		{
+			//测试，创建一个整数
 			int a =1025;
 			int b =lg(a);
 			Console.WriteLine(b);

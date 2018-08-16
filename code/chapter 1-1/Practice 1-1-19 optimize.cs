@@ -19,6 +19,7 @@ namespace AlgorithmsApplication
 		{
 			for (int N = 0; N < a; N++)
 			Console.WriteLine(N + " " + F(N));
+			Console.ReadKey();
 		}
 	}
 }

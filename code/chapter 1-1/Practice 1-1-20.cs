@@ -12,8 +12,10 @@ namespace AlgorithmsApplication
 
 		public static void Main(String[] args)
 		{
+			//测试，创建一个整数
 			double a = factorial(5);
 			Console.WriteLine(a);
+			Console.ReadKey();
 		}
 	}
 }
