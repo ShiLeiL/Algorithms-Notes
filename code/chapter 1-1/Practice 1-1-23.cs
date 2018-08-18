@@ -45,7 +45,7 @@ namespace AlgorithmsApplication
                 {
                     Console.Write($"{key[i]} ");
                 }
-                else if (ty == "-" && rank(key[i], a) != -1)
+                else if (ty == "-" && rank(key[i], a) == -1)
                 {
                     Console.Write($"{key[i]} ");
                 }

@@ -5,12 +5,13 @@ namespace AlgorithmsApplication
     {
         /* 算法（第四版） 1.1.27 */
         //因为该函数会递归多次，所以不建议运行
-        public static double binomial(int N,int k,double p,int depth)
+        public static int depth = 0;
+        public static double binomial(int N, int k, double p)
         {
             ++depth;
             if (N == 0 && k == 0) return 1.0;
             if (N < 0 || k < 0) return 0.0;
-            return (1.0 - p) * binomial(N - 1, k , p,depth) + p * binomial(N - 1, k - 1,p,depth);
+            return (1.0 - p) * binomial(N - 1, k, p) + p * binomial(N - 1, k - 1, p);
         }
 
         public static void Main(String[] args)
@@ -19,8 +20,7 @@ namespace AlgorithmsApplication
             int N = 50;
             int k = 25;
             double p = 0.25;
-            int depth = 0;
-            binomial(N, k, p, depth);
+            binomial(N, k, p);
             Console.WriteLine($"The program's depth is {depth}");
             Console.ReadKey();
         }
