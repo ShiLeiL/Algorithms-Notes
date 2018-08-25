@@ -2,14 +2,14 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp2
+namespace AlgorithmsApplication
 {
     public partial class Form1 : Form
     {
         /* 算法（第四版） 1.1.31 */
         //C#跟java不太一样，所以用winform画的图
         //参考了https://alg4.ikesnowy.com/1-1-31/ 和无数网络资料
-        //欢迎大家指正
+        //因为是这两天新学的winform，如果出错和遗漏，欢迎大家指正
         public Form1()
         {
             InitializeComponent();
