@@ -18,6 +18,7 @@ namespace Mahjong
             string cards = Console.ReadLine();
             if (cards.Length % 3 != 2)
             {
+                //输入的牌数不正确
                 Console.WriteLine("Input error");
                 Console.ReadKey();
                 return;
@@ -37,20 +38,23 @@ namespace Mahjong
             {
                 cardsGroup[i] = a.Substring(i, 1);
             }
-            
+
             //计字符个数
             int[] counts = new int[10];
             for (int i = 0; i < cardsGroup.Length; i++)
                 counts[Convert.ToInt32(cardsGroup[i])]++;
 
             //判断胡牌
+            int sign = 1; //优化游标
             int result = 0;
+            int[] b = new int[counts.Length];
             for (int i = 1; i < 10; i++)
             {
                 if (counts[i] >= 2)
                 {
+                    //先去掉对子
                     counts[i] -= 2;
-                    result = Handle(counts,sum - 2);
+                    result = Handle(counts, sum - 2, sign,b);
                     if (result == 1) return 1;
                     counts[i] += 2;
                 }
@@ -58,29 +62,41 @@ namespace Mahjong
             return result;
         }
 
-        static int Handle(int[] a,int sum)
+        static int Handle(int[] a, int sum, int sign,int[] b)
         {
             //处理牌方法
-            if (sum == 0) return 1;
-            for (int i = 1; i < 10; i++)
+            if (sum == 0) return 1;            
+            if (sign==1)
             {
-                if (a[i] == 0) continue;
-                if (a[i] == 1 || a[i] == 2 || a[i] == 4)
+                //拷贝数组，以免原数组受影响
+                for (int i = 0; i < a.Length; i++) b[i] = a[i];
+            }
+            for (int i = sign; i < 10; i++)
+            {
+                if (b[i] == 0)
                 {
-                    if (a[i + 1] > 0 && a[i + 2] > 0)
+                    sign++;
+                    continue;
+                }
+                if ((b[i] == 1 || b[i] == 2 || b[i] == 4)&& i<8)
+                {
+                    //若该牌数为1、2、4时，只能与后面的牌组成顺子
+                    if (b[i + 1] > 0 && b[i + 2] > 0)
                     {
-                        a[i]--;
-                        a[i + 1]--;
-                        a[i + 2]--;                        
-                        return Handle(a, sum - 3);
+                        b[i]--;
+                        b[i + 1]--;
+                        b[i + 2]--;
+                        return Handle(b, sum - 3,sign,b);
                     }
                     else return 0;
                 }
-                else
+                else if(b[i]==3)
                 {
-                    a[i] -= 3;
-                    return Handle(a, sum - 3);
+                    //若该牌数为3，则只能组成刻子
+                    b[i] -= 3;
+                    return Handle(b, sum - 3,sign,b);
                 }
+                return 0;
             }
             return 0;
         }
