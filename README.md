@@ -5,4 +5,5 @@
 
 ## 目录<br>
 ### 第一章<br>
-　　[1.1 基础编程模型](https://github.com/ShiLeiL/Algorithms-Notes/tree/master/code/chapter%201-1)
+　　[1.1 基础编程模型](https://github.com/ShiLeiL/Algorithms-Notes/tree/master/code/chapter%201-1)<br>
+　　[1.2 数据抽象](https://github.com/ShiLeiL/Algorithms-Notes/tree/master/code/chapter%201-2)
