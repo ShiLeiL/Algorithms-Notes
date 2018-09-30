@@ -6,7 +6,7 @@ namespace AlgorithmsApplication
 {
     public class ResizingArrayQueueOfTs<T> : IEnumerable<T>
     {
-        /* 算法（第四版） 1.3.10 */
+        /* 算法（第四版） 1.3.14 */
         private T[] a;
         private int N;
 
