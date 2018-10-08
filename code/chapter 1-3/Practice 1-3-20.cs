@@ -14,6 +14,11 @@ namespace AlgorithmsApplication
       
         public void delete(int k)
         {
+            if(k==1)
+            {
+                first=first.next;
+                return;
+            }
             Node temp = first;
             for (int i = 0;i<k-1;i++)
             { temp = temp.next;}
