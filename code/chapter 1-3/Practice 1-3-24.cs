@@ -4,10 +4,8 @@ public void removeAfter(Node a)
     if (a.next == null || a.item == null)
         return;
     Node temp = first;
-    while (true)
+    while (temp != null)
     {
-        if (temp == null)
-            break;
         if (temp.item.Equals(a.item))
             if(temp.next.Equals(a.next))
             {

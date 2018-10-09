@@ -4,10 +4,8 @@ public static void remove<T>(Algorithms<T> line,string key)
     Algorithms<T>.Node temp1 = line.first;
     Algorithms<T>.Node temp2 = null;
     T result = (T)Convert.ChangeType(key, typeof(T));//把目标值转换为T类型
-    while (true)
+    while (temp1 != null)
     {
-        if (temp1 == null)
-            break;
         if (temp1.item.Equals(result))
         {
             if(temp2==null)

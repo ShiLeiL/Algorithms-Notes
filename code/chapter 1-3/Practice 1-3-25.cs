@@ -4,10 +4,8 @@ public void insertAfter(Node a,Node b)
     if (a == null || b == null)
         return;
     Node temp = first;
-    while (true)
+    while (temp != null)
     {
-        if (temp == null)
-            break;
         if (temp.item.Equals(a.item))
             if (temp.next == a.next)
             {
