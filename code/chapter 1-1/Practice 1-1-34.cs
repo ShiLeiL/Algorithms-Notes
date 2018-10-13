@@ -159,7 +159,6 @@ namespace AlgorithmsApplication
             //将N个数按照随机顺序打印
             //可以不需要保存所有值
             //随机处参考了https://zhidao.baidu.com/question/418334526.html
-            Random r = new Random();
             Console.Write("result=");
             string temp = ""; //临时容器
             int n = 0;
