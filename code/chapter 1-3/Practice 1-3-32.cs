@@ -29,8 +29,8 @@ namespace AlgorithmsApplication
         public int size()
         { return N; }
 
-        public T peek()
         //获取队头元素
+        public T peek()
         { return first.item; }
         
         public T dequeue()
@@ -57,7 +57,7 @@ namespace AlgorithmsApplication
         }
 
         public T pop()
-        { return first.item; }
+        { return dequeue(); }
 
         public void enqueue(T item)
         {
