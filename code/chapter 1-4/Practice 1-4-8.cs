@@ -13,19 +13,22 @@ namespace AlgorithmsApplication
             for (int i = 0; i < a.Length; i++)
                 a[i] = Convert.ToInt32(Nums[i]);
             Console.WriteLine(count(a));
+            Console.ReadKey();
         }
 
         public static int count(int[] a)
         {
             Array.Sort(a);
-            int N = a.Length;
-            int cnt = 0;
-            int temp = 0;
-            for(int i=1;i<N;i++)
+            int cnt = 0; //整数对数量
+            int temp = 0; //同一个数字重复的数量
+            for (int i = 1; i < a.Length; i++)
             {
-                if (a[i] == a[i - 1])
+                while (i < a.Length && a[i] == a[i - 1])
+                {
                     temp++;
-                else
+                    i++;
+                }
+                if (temp > 0)
                 {
                     cnt += temp * (temp + 1) / 2;
                     temp = 0;
