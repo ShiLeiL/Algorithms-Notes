@@ -8,3 +8,4 @@
 　　[1.1 基础编程模型](https://github.com/ShiLeiL/Algorithms-Notes/tree/master/code/chapter%201-1)<br>
 　　[1.2 数据抽象](https://github.com/ShiLeiL/Algorithms-Notes/tree/master/code/chapter%201-2)<br>
 　　[1.3 背包、队列和栈](https://github.com/ShiLeiL/Algorithms-Notes/tree/master/code/chapter%201-3)<br>
+　　[1.4 算法分析](https://github.com/ShiLeiL/Algorithms-Notes/tree/master/code/chapter%201-4)<br>
