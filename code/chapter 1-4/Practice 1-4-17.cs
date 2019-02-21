@@ -12,10 +12,10 @@ namespace AlgorithmsApplication
             {
                 if (a[i] > a[max])
                     max = i;
-                if (a[i] < a[min])
+                else if (a[i] < a[min])
                     min = i;
             }
-            Console.WriteLine($"最遥远的两个数为：{a[min]},{a[max]}");
+            Console.WriteLine($"最遥远的两个数为：{a[min]},{a[max]}，距离为{a[max]-a[min]}");
         }
     }
 }
