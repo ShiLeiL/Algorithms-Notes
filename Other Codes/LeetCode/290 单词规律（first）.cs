@@ -1,3 +1,7 @@
+//题目：给定一种规律 pattern 和一个字符串 str ，判断 str 是否遵循相同的规律。
+//例：输入: pattern = "abba", str = "dog cat cat dog"
+//   输出: true
+
 //这是第一次的提交记录
 //执行用时88ms，超过91.89%的C#提交记录=v=
 //思路是用字典储存pattern和str之间的映射
